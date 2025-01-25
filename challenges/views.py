@@ -17,10 +17,6 @@ monthly_challenges = {
   'december': 'December Challenge'
 }
 
-# Create your views here.
-def index(request):
-  return HttpResponse('<p>Hello world</p>')
-
 def feb(request):
   return HttpResponse('<p>Feb Month </p>')
   
