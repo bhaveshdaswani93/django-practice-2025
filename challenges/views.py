@@ -35,7 +35,7 @@ def monthly_challenge_by_number(request, month):
 def monthly_challenge(request, month):
   try:
     month_res =  f'<h1>{monthly_challenges[month]}</h1>'
-    return render(request, 'challenges/challange.html', {
+    return render(request, 'challenges/challenge.html', {
       'text': monthly_challenges[month],
       'month': month
     })
