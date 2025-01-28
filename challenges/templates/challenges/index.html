@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+ Monthly Challenges
+{% endblock %
+<body>
+  <h1>Month list</h1>
+  <ul>
+    {% for month in months %}
+      <li>
+        <a href='{% url "monthly-challenge" month %}'>{{ month|capitilize }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

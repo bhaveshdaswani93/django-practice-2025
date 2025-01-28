@@ -15,7 +15,7 @@ monthly_challenges = {
   'september': 'September Challenge',
   'october': 'October Challenge',
   'november': 'November Challenge',
-  'december': 'December Challenge'
+  'december': None
 }
 
 def feb(request):
@@ -51,6 +51,9 @@ def index(request):
     month_path = reverse('monthly-challenge', args=[month])
     list_items += f'<li><a href="{month_path}">{month.capitalize()}</a></li>'
   response_data = f'<ul>{list_items}</ul>'
-  return HttpResponse(response_data)
+  return render(request, 'challenges/index.html', {
+    'months': months
+  })
+ # return HttpResponse(response_data)
   
   
