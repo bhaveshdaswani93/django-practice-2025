@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}
- Monthly Challenges
-{% endblock %
-<body>
+  Monthly Challenges
+{% endblock %}
+
+{% block content %}
+  {% include 'challenges/partials/header.html' %}
   <h1>Month list</h1>
   <ul>
     {% for month in months %}
       <li>
-        <a href='{% url "monthly-challenge" month %}'>{{ month|capitilize }}</a>
+        <a href='{% url "monthly-challenge" month %}'>{{ month|title }}</a>
       </li>
     {% endfor %}
   </ul>
-</body>
-</html>
+{% endblock %}
