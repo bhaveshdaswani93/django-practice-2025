@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-{% include 'challenges/partials/header.html' %}
+{% include 'challenges/partials/header.html' with current_view='challenge' %}
  <h1>Challenge for {{ month|capfirst }}</h1>
  {% if text is not None %}
    <h2>{{ text }}</h2>

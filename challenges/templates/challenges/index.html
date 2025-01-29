@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-  {% include 'challenges/partials/header.html' %}
+  {% include 'challenges/partials/header.html' with current_view='index' %}
   <h1>Month list</h1>
   <ul>
     {% for month in months %}
