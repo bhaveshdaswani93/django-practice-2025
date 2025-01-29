@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.urls import reverse
 from django.template.loader import render_to_string
 
@@ -42,7 +42,9 @@ def monthly_challenge(request, month):
     #template_html = render_to_string('challenges/challange.html')
     #return HttpResponse(template_html)
   except:
-    return HttpResponseNotFound('<h1>Monthly Challenge not fount</h1>')
+    # res_404 = render_to_string('404.html')
+    # return HttpResponseNotFound(res_404)
+    raise Http404()
   
 def index(request):
   list_items = ''
