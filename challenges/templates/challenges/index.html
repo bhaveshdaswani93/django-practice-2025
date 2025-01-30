@@ -6,11 +6,12 @@
 
 {% block styles %}
   <link rel="stylesheet" href="{% static 'challenges/challenges.css' %}">
+  <link rel="stylesheet" href="{% static 'challenges/header.css' %}">
 {% endblock %}
 
 {% block content %}
   {% include 'challenges/partials/header.html' with current_view='index' %}
-  <h1>Month list</h1>
+  {% comment %} <h1>Month list</h1> {% endcomment %}
   <ul>
     {% for month in months %}
       <li>

@@ -41,7 +41,8 @@ def monthly_challenge(request, month):
     })
     #template_html = render_to_string('challenges/challange.html')
     #return HttpResponse(template_html)
-  except:
+  except Exception as e:
+    print(e)
     # res_404 = render_to_string('404.html')
     # return HttpResponseNotFound(res_404)
     raise Http404()
